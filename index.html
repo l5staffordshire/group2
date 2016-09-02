@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel='stylesheet' type='text/css' href='rookie.css'>
+	
+	<title>Sign Up</title>
+	
+	<script type="text/javascript" src="rookie.js"></script>
+	<script>
+	
+	
+	</script>
+	<style>
+		#noInfo,#failed{
+		display:none;
+		}
+	</style>
+</head>
+<body>
+
+	<form id='login' method='post' action='rookie.php' validate>
+		<span id='noInfo'></span>
+		<input type='email' id='emailLogin' name='emailLogin' placeholder='email' required>
+		<input type='password' id='passwordLogin' name='passwordLogin' placeholder='password' required>
+		<br>
+		<button id='submitLogin' type='submit'>Login</button>
+	</form>
+	
+	<form id='signUp' method='post' action='rookie.php'>
+		<span id='failed' style="color:red">Sign Up failed, try again!</span>
+		<label>Personal Information</label><br>
+		<input type='text' id='firstname' name='firstname' placeholder='first name' required>
+		<input type='text' id='lastname' name='lastname' placeholder='last name' required>
+		<input type='email' id='email' name='email' placeholder='email' required>
+		<input type='number' id='phone' name='phone' placeholder='phone number' minlength='10' required>
+		<input type='password' id='password' name='password' placeholder='password' required>
+		<span id='checkmark' class='checkmark'>&#10003</span> <span id='multimark' class='multimark'>&#10005</span><br>
+		
+		<input type='password' id='confPassword' name='confPassword' placeholder='confirm password' required onblur='passValidate()'>
+		<span class='checkmark'>&#10003</span> <span class='multimark'>&#10005</span><br>
+		
+		<input type='date' id='dob' name='dob' placeholder='date of birth(yy-mm-dd)' required>
+		<input type='number' id='progLevel' name='progLevel' placeholder='program Level' min='4' max='400' required>
+		
+		<input type='text' id='address' name='address' placeholder='residential address' required>
+		<input type='text' id='addressPostal' name='addressPostal' placeholder='postal address' required>
+		<select id='gender' name='gender' required>
+			<option value='male'>male</option>
+			<option value='female'>female</option>
+		</select>
+		<br><br>
+		<label>Next Of Kin</label>
+		<br>
+		<input type='text' id='kinname' name='kinname' placeholder='name' required>
+		<input type='email' id='kinmail' name='kinmail' placeholder='email' required>
+		<input type='phone' id='kinphone' name='kinphone' placeholder='phone number' required>
+		<input type='text' id='relationship' name='relationship' placeholder='relationship' required>
+		<br>
+		<button id='signSubmit' type='submit'>Sign Up</button>
+ 	</form>
+
+</body>
+</html>

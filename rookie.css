@@ -1,0 +1,69 @@
+
+body{
+	text-align:center;
+}
+
+input{
+	padding:10px 10px;
+	width:200px;
+	margin:5px;
+	border-radius:3px;
+	border:1px solid grey;
+	font-size:9pt;
+}
+
+#signUp{
+	width:500px;
+	margin:auto;
+	text-align:center;
+}
+
+#login{
+	margin:20px;
+}
+
+button{
+	width:100px;
+	padding:7px 10px;
+	border:none;
+	cursor:pointer
+}
+
+button:hover{
+	box-shadow:3px 3px 3px grey;
+}
+#login button{
+	background:blue;
+	color:white;
+}
+
+#signUp button{
+	background:green;
+	color:white;
+}
+
+.checkmark{
+	color:green;
+	display:none;
+}
+.multimark{
+	color:red;
+	display:none;
+}
+#sure{
+	display:none;
+}
+#sure button{
+	border-radius:3px;
+}
+#yes{
+	background:#ff7f13!important;
+	color:white;
+}
+#no{
+	background:#51fc0a!important;
+	color:white;
+}
+#changes{
+	color:green;
+	}
