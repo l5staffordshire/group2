@@ -1,13 +1,20 @@
 
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%! 
+    public String setUserName (String name)
+        {
+            if (name == null){
+                return("");
+            } else {
+                return("Welcome, " + name);
+            }
+    }
+%>
 <% 
     String fname = request.getParameter("FNAME");
     session.setAttribute("name",fname);
-    
-    
-
-    
+    String displayName = (String) session.getAttribute("name");
 %>
 <!doctype html>
 <html>
@@ -25,12 +32,7 @@
             <div class="row well">
                 <div class="col-xs-2 col-xs-offset-10">
                     <button type="button" class="btn btn-default">
-                        <span><%if (session.getAttribute("name") == null){
-                                          out.print("");
-                                     } else {
-                                          out.print("Welcome, " + session.getAttribute("name"));
-                                  }%>
-                        </span>
+                        <span><%=setUserName(displayName)%></span>
                     </button>
                 </div>
             </div>
